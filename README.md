@@ -134,25 +134,41 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-1. Open the Network Sharing Center, click on "Ethernet"
 
-<img src="Images/Ethernet1.jpg" style="zoom:20%;" /><img src="Images/Ethernet2.jpg" style="zoom:20%;" />
+|                                                       |                                                       |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| <img src="Images/Ethernet1.jpg" style="zoom:100%;" /> | <img src="Images/Ethernet2.jpg" style="zoom:100%;" /> |
+
+
 
 
 
 ##### 1-2-2. In the "Ethernet Status" box, click on "Properties"
 
- <img src="Images/Ethernet3.jpg" style="zoom:30%;" /><img src="Images/Ethernet4.jpg" style="zoom:30%;" />
+|                                                       |                                                       |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| <img src="Images/Ethernet3.jpg" style="zoom:100%;" /> | <img src="Images/Ethernet4.jpg" style="zoom:100%;" /> |
+
+ 
 
 
 
 ##### 1-2-3. Double-click on "Internet Protocol Version 4 (TCP/IPv4)"
 
-<img src="Images/Ethernet5.jpg" style="zoom:20%;" />
+|                                                       |
+| ----------------------------------------------------- |
+| <img src="Images/Ethernet5.jpg" style="zoom:100%;" /> |
+
+
 
 
 
 ##### 1-2-4. Configure the IP address to 192.168.1.100 and subnet mask to 255.255.255.0
 
-<img src="Images/Ethernet6.jpg" style="zoom:20%;" />
+|                                                       |
+| ----------------------------------------------------- |
+| <img src="Images/Ethernet6.jpg" style="zoom:100%;" /> |
+
+
 
 
 
