@@ -136,17 +136,17 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-1. Open the Network Sharing Center, click on "Ethernet"
 
-<p align="center"><img src="Images/Ethernet1.jpg"></p>
+<p align="center"><img src="Images/Ethernet1.jpg" height="500" width="300"></p>
 
-<p align="center"><img src="Images/Ethernet2.jpg"></p>
+<p align="center"><img src="Images/Ethernet2.jpg" height="200" width="300"></p>
 
 
 
 ##### 1-2-2. In the "Ethernet Status" box, click on "Properties"
 
-<p align="center"><img src="Images/Ethernet3.jpg"></p>
+<p align="center"><img src="Images/Ethernet3.jpg" height="100" width="400"></p>
 
-<p align="center"><img src="Images/Ethernet4.jpg"></p>
+<p align="center"><img src="Images/Ethernet4.jpg" height="400" width="300"></p>
 
  
 
@@ -154,13 +154,13 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-3. Double-click on "Internet Protocol Version 4 (TCP/IPv4)"
 
-<p align="center"><img src="Images/Ethernet5.jpg"></p>
+<p align="center"><img src="Images/Ethernet5.jpg" height="300" width="400"></p>
 
 
 
 ##### 1-2-4. Configure the IP address to 192.168.1.100 and subnet mask to 255.255.255.0
 
-<p align="center"><img src="Images/Ethernet6.jpg"></p>
+<p align="center"><img src="Images/Ethernet6.jpg" height="300" width="400"></p>
 
 
 
@@ -168,7 +168,7 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-5. Check that LiDAR is connected (Search 192.168.1.201 in search bar)
 
-<p align="center"><img src="Images/verification.jpg"></p>
+<p align="center"><img src="Images/verification.jpg" height="200" width="600"></p>
 
 
 
