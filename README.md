@@ -114,7 +114,7 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ## IV. Flow Chart
 
-<img src="images/flowchart.jpg" style="zoom:90%;" />
+<img src="Images/flowchart.jpg" style="zoom:90%;" />
 
 
 
