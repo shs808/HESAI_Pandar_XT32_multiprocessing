@@ -22,7 +22,7 @@ LiDAR provided by [HESAI SDK](https://github.com/HesaiTechnology/HesaiLidar_Gene
 
 **Demo**
 
-<img src="Images/XT32_Demo.gif" style="zoom:100%;" />
+<img src="Images/XT32_Demo.gif" style="zoom:150%;" />
 
 
 
