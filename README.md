@@ -164,9 +164,9 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-4. Configure the IP address to 192.168.1.100 and subnet mask to 255.255.255.0
 
-|                                                       |
-| ----------------------------------------------------- |
-| <img src="Images/Ethernet6.jpg" style="zoom:100%;" /> |
+|                                                      |
+| ---------------------------------------------------- |
+| <img src="Images/Ethernet6.jpg" style="zoom:50%;" /> |
 
 
 
