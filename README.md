@@ -1,3 +1,5 @@
+
+
 # HESAI Pandar XT32 Point Cloud Data Acquirement
 
 Date: 							2023.03.08
@@ -69,7 +71,7 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 conda update -n base -c defaults conda
 ```
 
-<img src="Images/conda2.jpg" style="zoom:50%;" />
+<p align="center"><img src="Images/conda2.jpg"></p>
 
 
 
@@ -79,7 +81,7 @@ conda update -n base -c defaults conda
 conda create -n XT32_py38 python=3.8.16
 ```
 
-<img src="Images/conda3.jpg" style="zoom:50%;" />
+<p align="center"><img src="Images/conda3.jpg"></p>
 
 
 
@@ -89,7 +91,7 @@ conda create -n XT32_py38 python=3.8.16
 conda activate XT32_py38
 ```
 
-<img src="Images/conda4.jpg" style="zoom:50%;" />
+ <p align="center"><img src="Images/conda4.jpg"></p>
 
 
 
@@ -116,7 +118,7 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ## IV. Flow Chart
 
-<img src="Images/flowchart.jpg" style="zoom:90%;" />
+<p align="center"><img src="Images/flowchart.jpg"></p>
 
 
 
@@ -126,7 +128,7 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 #### 1-1. Connect LiDAR sensor through Ethernet cable
 
-<img src="Images/connection.jpg" style="zoom:50%;" />
+<p align="center"><img src="Images/connection.jpg"></p>
 
 
 
@@ -134,19 +136,17 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-1. Open the Network Sharing Center, click on "Ethernet"
 
-|                                                       |                                                       |
-| ----------------------------------------------------- | ----------------------------------------------------- |
-| <img src="Images/Ethernet1.jpg" style="zoom:100%;" /> | <img src="Images/Ethernet2.jpg" style="zoom:100%;" /> |
+<p align="center"><img src="Images/Ethernet1.jpg"></p>
 
-
+<p align="center"><img src="Images/Ethernet2.jpg"></p>
 
 
 
 ##### 1-2-2. In the "Ethernet Status" box, click on "Properties"
 
-|                                                       |                                                       |
-| ----------------------------------------------------- | ----------------------------------------------------- |
-| <img src="Images/Ethernet3.jpg" style="zoom:100%;" /> | <img src="Images/Ethernet4.jpg" style="zoom:100%;" /> |
+<p align="center"><img src="Images/Ethernet3.jpg"></p>
+
+<p align="center"><img src="Images/Ethernet4.jpg"></p>
 
  
 
@@ -154,19 +154,13 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-3. Double-click on "Internet Protocol Version 4 (TCP/IPv4)"
 
-|                                                       |
-| ----------------------------------------------------- |
-| <img src="Images/Ethernet5.jpg" style="zoom:100%;" /> |
-
-
+<p align="center"><img src="Images/Ethernet5.jpg"></p>
 
 
 
 ##### 1-2-4. Configure the IP address to 192.168.1.100 and subnet mask to 255.255.255.0
 
-|                                                      |
-| ---------------------------------------------------- |
-| <img src="Images/Ethernet6.jpg" style="zoom:50%;" /> |
+<p align="center"><img src="Images/Ethernet6.jpg"></p>
 
 
 
@@ -174,7 +168,7 @@ Also, read about [How to program Python in VS Code](https://ykkim.gitbook.io/dli
 
 ##### 1-2-5. Check that LiDAR is connected (Search 192.168.1.201 in search bar)
 
-<img src="Images/verification.jpg" style="zoom:50%;" />
+<p align="center"><img src="Images/verification.jpg"></p>
 
 
 
