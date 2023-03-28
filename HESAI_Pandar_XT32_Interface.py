@@ -171,7 +171,7 @@ def save_data(shared_data, conn):
         print(e)
 
 # Unpacking LiDAR Binary Data in frame
-def unpack(shared_data, shared_XYZ):
+def unpack(shared_data, shared_XYZI):
     # Definition raw data
     raw_data = []
     Time = time.monotonic()
@@ -260,12 +260,16 @@ def unpack(shared_data, shared_XYZ):
             X = np.multiply(range, np.multiply(np.cos(v_angle), np.sin(azim)))
             Y = np.multiply(range, np.multiply(np.cos(v_angle), np.cos(azim)))
             Z = np.multiply(range, np.sin(v_angle))
+            I = int_refl
+
+            # non-linear intensity mapping
+            I = np.vectorize(REFLECT_MAP.get)(I)
             
             # Transposition about X, Y, Z to XYZ array (:, 3)
-            points_32 = np.transpose(np.vstack((X, Y, Z)))
+            points_32 = np.transpose(np.vstack((X, Y, Z, I)))
 
             # Send XYZ Data using multiprocessing.Pipe()
-            shared_XYZ[1].send(points_32)
+            shared_XYZI[1].send(points_32)
 
             # Print the point size and del time
             print(f"point_size: {len(points_32)} del_time: {time.monotonic() - Time}")
@@ -274,11 +278,11 @@ def unpack(shared_data, shared_XYZ):
             Time = time.monotonic()
 
 # Visualization Point Cloud Data to BEV(bird eye view)    
-def visualization(shared_XYZ):
+def visualization(shared_XYZI):
     # X, Y, Z, I Definition
-    Xyz = np.empty((0,3), dtype=np.float32)
-    np_x = np.asarray(Xyz)[:,0].astype(np.float32)
-    np_y = np.asarray(Xyz)[:,1].astype(np.float32)
+    Xyzi = np.empty((0,4), dtype=np.float32)
+    np_x = np.asarray(Xyzi)[:,0].astype(np.float32)
+    np_y = np.asarray(Xyzi)[:,1].astype(np.float32)
 
     # Visualization Specification
     _, ax = plt.subplots()
@@ -288,19 +292,19 @@ def visualization(shared_XYZ):
     plt.draw()
 
     # Data Update Function
-    def update_point_cloud(_Xyz):
-        new_point_cloud = _Xyz[:, 0:2]
+    def update_point_cloud(_Xyzi):
+        new_point_cloud = _Xyzi[:, 0:2]
         sc.set_offsets(new_point_cloud)
         plt.pause(0.01)
 
     while 1:
         # Receive XYZ coordinate information using polling to prevent a communication conflict
-        if shared_XYZ[0].poll():
-            Xyz = shared_XYZ[0].recv()
+        if shared_XYZI[0].poll():
+            Xyzi = shared_XYZI[0].recv()
         
         # Update XYZ data in BEV
-        if Xyz != []:
-            update_point_cloud(Xyz)
+        if Xyzi != []:
+            update_point_cloud(Xyzi)
 
             
 # ============= Multiprocessing Pipeline Main Loop ============= #
@@ -312,14 +316,14 @@ if __name__ == '__main__':
     # shared_XYZ  : X, Y, Z coordinate information through unpacking shared data
     conn1, conn2 = Pipe()
     shared_data = Pipe()
-    shared_XYZ = Pipe()
+    shared_XYZI = Pipe()
     
     # Multiprocessing capture, save data, unpacking, visualization
     processA = Process(target = capture, args = (PORT, conn1))
     processA.start()
     processB = Process(target = save_data, args = (shared_data, conn2))
     processB.start()
-    processC = Process(target = unpack, args=(shared_data, shared_XYZ))
+    processC = Process(target = unpack, args=(shared_data, shared_XYZI))
     processC.start()
-    processD = Process(target = visualization, args=(shared_XYZ,))
+    processD = Process(target = visualization, args=(shared_XYZI,))
     processD.start()
