@@ -193,7 +193,7 @@ def unpack(shared_data, shared_XYZ):
             int_refl   = np.empty(int(XT_MAX_POINT_SIZE * N), dtype=np.uint8)
 
             # For Loop to slice azimuth, distance, reflection
-            for i in np.arange(1, N):
+            for i in np.arange(0, N):
                 i_pck = int(XT_DATA_SIZE * i)
                 body = raw_data[i_pck + XT_HEAD_SIZE : i_pck + XT_HEAD_SIZE + XT_BODY_SIZE]
                 i_bin = int(XT_MAX_POINT_SIZE * i)
