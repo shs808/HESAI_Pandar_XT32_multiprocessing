@@ -2,18 +2,6 @@
 
 # HESAI Pandar XT32 Point Cloud Data Acquirement
 
-Date: 							2023.03.08
-
-Name:  						ChangMin An
-
-Student Number:   	21700421
-
-Github: 						[Link](https://github.com/ckdals915/HESAI_Pandar_XT32_Interface)
-
-Tutorial Video: 		  	[Link](https://youtu.be/3jmOJDmWCKY)
-
-
-
 ## I. Introduction
 
 **Goal: HESAI Pandar XT32 LiDAR Acquirement Point Cloud Data using Windows 10 Python**
