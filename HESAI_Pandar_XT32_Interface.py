@@ -1,6 +1,6 @@
 '''
 * ***********************************************************************************************
-* @author	  ChangMin An
+* @author	  HyeongSeok Song, ChangMin An
 * @prof       YoungKeun Kim
 * @Mod		  2023 - 03 - 08
 * @brief	  HESAI Pandar XT32 Acquirement Point Cloud Data
